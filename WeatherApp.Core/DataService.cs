@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 namespace WeatherApp
 {
-    class DataService
+    public class DataService
     {
         public static async Task<dynamic> GetDataFromService(string queryString)
         {

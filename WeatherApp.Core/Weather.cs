@@ -1,6 +1,6 @@
 ﻿namespace WeatherApp
 {
-    class Weather
+    public class Weather
     {
         public string Temperature { get; set; } = " ";
     }
