@@ -24,7 +24,8 @@ namespace WeatherApp
 
         private async void Button_Click(object sender, System.EventArgs e)
         {
-            var weather = await Core.Core.GetWeather();
+            string city = FindViewById<EditText>(Resource.Id.textInputEditText1).Text;
+            var weather = await Core.Core.GetWeather(city);
             textView.Text = weather.Temperature;
         }
     }

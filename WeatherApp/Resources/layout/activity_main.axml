@@ -11,21 +11,33 @@
 		android:orientation="vertical"
 		android:minWidth="25px"
 		android:minHeight="25px"
-		android:layout_width="wrap_content"
+		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
 		android:id="@+id/linearLayout1">
-	<Button
-		android:text="Button"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_below="@id/linearLayout1"
-		android:id="@+id/button1" />
-	<TextView
-		android:text="Large Text"
-		android:textAppearance="?android:attr/textAppearanceLarge"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:layout_below="@id/button1"
-		android:id="@+id/textView1" />
+		<LinearLayout
+			android:orientation="horizontal"
+			android:minWidth="25px"
+			android:minHeight="25px"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/linearLayout2">
+			<android.support.design.widget.TextInputEditText
+				android:layout_width="300dp"
+				android:layout_height="match_parent"
+				android:id="@+id/textInputEditText1" />
+			<Button
+				android:text="1"
+				android:layout_width="wrap_content"
+				android:layout_height="match_parent"
+				android:id="@+id/button1" />
 		</LinearLayout>
+		<TextView
+			android:text="Large Text"
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/button1"
+			android:id="@+id/textView1"
+			android:layout_gravity="center_horizontal"  />
+	</LinearLayout>
 </RelativeLayout>
