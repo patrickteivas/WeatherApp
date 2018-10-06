@@ -22,57 +22,46 @@
 			android:id="@+id/searchView1"
 			android:queryHint="Type your city here"
 			android:iconifiedByDefault="false" />
-        <TextView
-            android:text=""
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/City"
-            android:layout_gravity="center_horizontal" />
-        <TextView
-            android:text="Temperature"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/linearLayout1"
-            android:id="@+id/textView1"
-            android:textColor="#ff838181" />
-        <TextView
-            android:text=""
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/minMaxTemp" 
-            android:textColor="#ff000000" />
 		<TextView
-            android:text="Pressure"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/linearLayout1"
-            android:id="@+id/textView2"
-            android:textColor="#ff838181" />
-        <TextView
-            android:text=""
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/Pressure" 
-            android:textColor="#ff000000" />
-		<TextView
-            android:text="Wind speed"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/linearLayout1"
-            android:id="@+id/textView3"
-            android:textColor="#ff838181" />
-        <TextView
-            android:text=""
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/windSpeed" 
-            android:textColor="#ff000000" />
+			android:text=""
+			android:textAppearance="?android:attr/textAppearanceLarge"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/Temp"
+			android:textColor="#ff000000"
+			android:gravity="center" />
+		<ImageView
+			android:src="@drawable/sun"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/imageView1"
+			android:tint="#ffe5ff00" />
+		<LinearLayout
+			android:orientation="horizontal"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:id="@+id/linearLayout2">
+			<TextView
+				android:text=""
+				android:textAppearance="?android:attr/textAppearanceMedium"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:id="@+id/Pressure"
+				android:textColor="#ff000000"/>
+			<LinearLayout
+				android:orientation="horizontal"
+				android:layout_width="fill_parent"
+				android:layout_height="match_parent"
+				android:id="@+id/linearLayout2"
+				android:gravity="right">
+				<TextView
+					android:text=""
+					android:textAppearance="?android:attr/textAppearanceMedium"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:id="@+id/windSpeed"
+					android:textColor="#ff000000"/>
+			</LinearLayout>
+		</LinearLayout>
 	</LinearLayout>
 </RelativeLayout>

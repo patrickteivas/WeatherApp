@@ -27,10 +27,9 @@ namespace WeatherApp
             searchBar.ClearFocus();
             var weather = await Core.Core.GetWeather(city);
 
-            FindViewById<TextView>(Resource.Id.City).Text = weather.City;
-            FindViewById<TextView>(Resource.Id.minMaxTemp).Text = weather.Temperature;
+            FindViewById<TextView>(Resource.Id.Temp).Text = weather.Temperature;
             FindViewById<TextView>(Resource.Id.Pressure).Text = weather.Pressure;
-            FindViewById<TextView>(Resource.Id.windSpeed).Text = weather.windSpeed;
+            FindViewById<TextView>(Resource.Id.windSpeed).Text = weather.WindSpeed;
         }
     }
 }
