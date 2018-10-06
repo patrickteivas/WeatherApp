@@ -15,8 +15,12 @@ namespace WeatherApp.Core
             dynamic results = await DataService.GetDataFromService(queryString).ConfigureAwait(false);
             Weather weather = new Weather
             {
-                Temperature = (string)results["main"]["temp"] + " °C"
+                City = (string)results["name"],
+                Temperature = (string)results["main"]["temp"] + " °C",
+                Pressure = (string)results["main"]["pressure"] + " hPa",
+                windSpeed = (string)results["wind"]["speed"] + " m/s"
             };
+
             return weather;
         }
     }
