@@ -22,6 +22,13 @@
 			android:id="@+id/searchView1"
 			android:queryHint="Type your city here"
 			android:iconifiedByDefault="false" />
+		<ProgressBar
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/linearLayout1"
+			android:id="@+id/progressBar1"
+			android:layout_gravity="center"
+			android:visibility="invisible" />
 		<TextView
 			android:text=""
 			android:textAppearance="?android:attr/textAppearanceLarge"
@@ -31,11 +38,9 @@
 			android:textColor="#ff000000"
 			android:gravity="center" />
 		<ImageView
-			android:src="@drawable/sun"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:id="@+id/imageView1"
-			android:tint="#ffe5ff00" />
+			android:id="@+id/imageView1" />
 		<LinearLayout
 			android:orientation="horizontal"
 			android:layout_width="fill_parent"

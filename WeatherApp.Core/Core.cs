@@ -17,7 +17,8 @@ namespace WeatherApp.Core
             {
                 Temperature = (string)results["main"]["temp_min"] + "/" +(string)results["main"]["temp_max"] + " °C",
                 Pressure = (string)results["main"]["pressure"] + " hPa",
-                WindSpeed = (string)results["wind"]["speed"] + " m/s"
+                WindSpeed = (string)results["wind"]["speed"] + " m/s",
+                WeatherType = (string)results["weather"][0]["icon"]
             };
 
             return weather;
