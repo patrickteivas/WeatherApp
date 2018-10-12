@@ -38,7 +38,7 @@
 			android:gravity="center" />
 		<ImageView
 			android:layout_width="match_parent"
-			android:layout_height="wrap_content"
+			android:layout_height="240dp"
 			android:id="@+id/imageView1" />
 		<LinearLayout
 			android:orientation="horizontal"
@@ -67,5 +67,11 @@
 					android:textColor="#ff000000"/>
 			</LinearLayout>
 		</LinearLayout>
+		<Button
+			android:text="5 days forecast"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_below="@id/linearLayout1"
+			android:id="@+id/fiveDayForecast" />
 	</LinearLayout>
 </RelativeLayout>
