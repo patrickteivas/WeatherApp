@@ -46,9 +46,9 @@ namespace WeatherApp
                 view = context.LayoutInflater.Inflate(Resource.Layout.CustomRow, null);
 
             view.FindViewById<TextView>(Resource.Id.minMaxTemp).Text = items[position].Temperature;
-            DateTime unixTime = DateTimeOffset.FromUnixTimeSeconds(items[position].WeatherDate).DateTime.ToLocalTime();
-            view.FindViewById<TextView>(Resource.Id.date).Text = unixTime.Day + "." + unixTime.Month;
-            view.FindViewById<TextView>(Resource.Id.clock).Text = unixTime.Hour + ":" + unixTime.Minute;
+            DateTime localTime = DateTimeOffset.FromUnixTimeSeconds(items[position].WeatherDate).DateTime.ToLocalTime();
+            view.FindViewById<TextView>(Resource.Id.date).Text = localTime.ToString("dd.MM");
+            view.FindViewById<TextView>(Resource.Id.clock).Text = localTime.ToString("HH:mm");
             MainActivity.SetIcon(items[position].WeatherType, view.FindViewById<ImageView>(Resource.Id.icon));
             return view;
         }

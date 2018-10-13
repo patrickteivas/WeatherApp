@@ -7,6 +7,8 @@ using System;
 using Android.Graphics;
 using System.Net;
 using System.Collections.Generic;
+using Android.Content;
+using Newtonsoft.Json;
 
 namespace WeatherApp
 {
@@ -65,12 +67,19 @@ namespace WeatherApp
         {
             if (progessBar.Visibility == Android.Views.ViewStates.Invisible && searchBar.Query != "")
             {
-                List<Weather> weather = await Core.Core.GetWeatherFiveDay(searchBar.Query);
-                ListAdapter = new CustomAdapter(this, weather);
+                progessBar.Visibility = Android.Views.ViewStates.Visible;
+
+                List<Weather> fiveDaysForecast = await Core.Core.GetWeatherFiveDay(searchBar.Query);
+                var listViewActivity = new Intent(this, typeof(ListView));
+
+                listViewActivity.PutExtra("Weather", JsonConvert.SerializeObject(fiveDaysForecast));
+                progessBar.Visibility = Android.Views.ViewStates.Invisible;
+
+                StartActivity(listViewActivity);
             }
         }
 
-        public void SetIcon(string icon, ImageView image)
+        public static void SetIcon(string icon, ImageView image)
         {
             Bitmap imageBitmap = null;
             using (var webClient = new WebClient())

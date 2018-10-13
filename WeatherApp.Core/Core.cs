@@ -48,7 +48,7 @@ namespace WeatherApp.Core
                     weather = new Weather()
                     {
                         Temperature = (string)results["list"][i]["main"]["temp_min"] + "/" + (string)results["list"][i]["main"]["temp_max"] + " °C",
-                        WeatherType = (string)results["list"][0]["weather"][0]["icon"],
+                        WeatherType = (string)results["list"][i]["weather"][0]["icon"],
                         WeatherDate = (int)results["list"][i]["dt"]
                     };
                     fiveDayForecasts.Add(weather);
