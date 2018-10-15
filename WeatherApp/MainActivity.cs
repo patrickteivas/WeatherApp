@@ -28,7 +28,7 @@ namespace WeatherApp
             searchBar = FindViewById<SearchView>(Resource.Id.searchView1);
 
             searchBar.QueryTextSubmit += SearchBar_QueryTextSubmit;
-            FindViewById<Button>(Resource.Id.fiveDayForecast).Click += fiveDayForecast_Click;
+            FindViewById<Button>(Resource.Id.fiveDayForecast).Click += FiveDayForecast_Click;
         }
 
         private async void SearchBar_QueryTextSubmit(object sender, SearchView.QueryTextSubmitEventArgs e)
@@ -63,7 +63,7 @@ namespace WeatherApp
             }
         }
 
-        private async void fiveDayForecast_Click(object sender, System.EventArgs e)
+        private async void FiveDayForecast_Click(object sender, System.EventArgs e)
         {
             if (progessBar.Visibility == Android.Views.ViewStates.Invisible && searchBar.Query != "")
             {
