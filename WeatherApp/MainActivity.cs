@@ -60,6 +60,7 @@ namespace WeatherApp
                     FindViewById<TextView>(Resource.Id.Temp).Text = "Something went wrong.";
                 }
                 progessBar.Visibility = Android.Views.ViewStates.Invisible;
+                FindViewById<Button>(Resource.Id.fiveDayForecast).Visibility = Android.Views.ViewStates.Visible;
             }
         }
 
